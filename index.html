@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Clase 7</title>
+        <link rel="stylesheet" href="css/apple.css" title="jQTouch">
+
+		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/API/contacts.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/API/files.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            var jQT = new $.jQTouch({
+                icon: 'img/cenet.png',
+                icon4: 'img/cenet.png',
+                addGlossToIcon: false,
+                startupScreen: 'img/cenet.png',
+                statusBar: 'black-translucent',
+                themeSelectionSelector: '#jqt #themes ul',
+                preloadImages: []
+            });
+		</script>
+    </head>
+    <body>
+        <div id="jqt">
+            <div id="home" class="current">
+                <div class="toolbar">
+                    <h1>Clase 7</h1>
+                </div>
+                <div class="scroll">
+                    <ul class="rounded">
+                        <li class="arrow"><a href="#contactos">Contactos <small class="counter">2</small></a> </li>
+                        <li class="arrow"><a href="#archivos">Archivos <small class="counter">2</small></a></li>
+                    </ul>
+                    <div class="info">
+                        <p>Proyecto para la pr&aacute;ctica<br>de la API de PhoneGap.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="contactos">
+            	<div class="toolbar">
+                    <h1>Contactos</h1>
+                    <a class="back slideup" id="infoButton" href="#">Ant</a>
+                </div>
+                <div class="scroll">
+                	<ul class="rounded">
+                        <li><a href="#nuevoCont" class="pop">Crear Contacto</a></li>
+                    </ul>
+                    <ul class="plastic scroll">
+                    	
+                    </ul>
+                    <div class="info">
+                        <p>Demostración de Contactos.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="nuevoCont">
+                <ul class="rounded edit">
+                	<li><input type="text" placeholder="Contacto" id="nombreContacto" /></li>
+                    <li><input type="tel" placeholder="Número" id="numeroContacto" /></li>
+                </ul>
+                <ul class="individual">
+                	<li><a href="#" class="crearContacto" style="background-color: #090; color: #fff;">Crear</a></li>
+                    <li><a href="#" class="goback" style="background-color: #900; color: #fff;">Cancelar</a></li>
+                </ul>
+            </div>
+            <div id="archivos">
+            	<div class="toolbar">
+                    <h1>Archivos</h1>
+                    <a class="back slideup" id="infoButton" href="#">Ant</a>
+                </div>
+                <div class="scroll">
+                	<ul class="rounded">
+                        <li><textarea id="archivosCamp"></textarea></li>
+                    </ul>
+                    <ul class="rounded">
+                    	<li><a href="#" style="background-color: #090; color: #fff;">Escribir</a></li>
+                        <li><a href="#" style="background-color: #06F; color: #fff;">Leer</a></li>
+                    </ul>
+                    <div class="info">
+                        <p>Demostración acceso a archivos.</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </body>
+</html>
