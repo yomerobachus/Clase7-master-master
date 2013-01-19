@@ -40,9 +40,9 @@ $(document).ready(function(e) {
         				var reader = new FileReader();
         				reader.onloadend = function(evt) {
             				alert('Archivo leido');
-            				//console.log(evt.target.result);
+            				$('#archivosCamp').val(evt.target.result);
         				};
-        				$('#archivosCamp').val(reader.readAsText(file));
+        				//$('#archivosCamp').val(reader.readAsText(file));
 					};
 			};
 		});
