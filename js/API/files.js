@@ -19,6 +19,9 @@ $(document).ready(function(e) {
         				};
         				writer.write($('#archivosCamp').val());
 					}
+					function fail(err){
+						alert("error: "+err.code);
+					}
 					break;
 				case 1://Leer Archivo
 					
